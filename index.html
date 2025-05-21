@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Crime Statistics</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #222;
+            color: #fff;
+            background-image: radial-gradient(#000000 1px, transparent 1px), radial-gradient(#000000 1px, transparent 1px);
+            background-position: 0 0, 25px 25px;
+            background-size: 50px 50px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        h1, h2 {
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .graph {
+            width: 400px;
+            height: 300px;
+            background-color: #fff;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .github-logo {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-image: url('https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png');
+            background-size: cover;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>US Crime Statistics</h1>
+        <br>
+        <div class="btn-group-vertical">
+            <button class="btn btn-primary" onclick="redirectTo('page1.html')">Data Quality Initial Assessment</button>
+            <button class="btn btn-primary" onclick="redirectTo('page1_1.html')">Exploratory Data Analysis</button>
+            <button class="btn btn-primary" onclick="redirectTo('page2.html')">Q1. What are the most common types of crimes recorded in the dataset?</button>
+            <button class="btn btn-primary" onclick="redirectTo('page3.html')">Q2. Can the data reveal any noticeable trends or patterns in crime reporting over a prolonged timeframe?</button>
+            <button class="btn btn-primary" onclick="redirectTo('page4.html')">Q3. What's the analysis of Crime Rates Across Police Districts?</button>
+            <button class="btn btn-primary" onclick="redirectTo('page5.html')">Q4. How do the patterns of drug, alcohol, property, and societal crimes vary across different times of the day, such as morning, afternoon, evening, and night?</button>
+            <button class="btn btn-primary" onclick="redirectTo('page6.html')">Q5. How do the prevalences of specific crime types vary across different cities?</button>
+            <button class="btn btn-primary" onclick="redirectTo('page7.html')">Q6. What is the distribution of crimes across different sectors and beats?</button>
+            <button class="btn btn-primary" onclick="redirectTo('page8.html')">Q7. Is there a relationship between the time of day and the occurrence of certain crimes?</button>
+            <button class="btn btn-primary" onclick="redirectTo('page9.html')">Q8. How do crime rates vary based on the day of the week?</button>
+            <button class="btn btn-primary" onclick="redirectTo('page10.html')">Q9. What is the average response time of law enforcement (from dispatch to arrival) for reported crimes?</button>
+            <button class="btn btn-primary" onclick="redirectTo('page11.html')">Q10. How do crime rates differ between weekdays and weekends, and is there a variation in the types of crimes reported?</button>
+            <button class="btn btn-primary" onclick="redirectTo('page12.html')">[BONUS QUESTION] Q11. How long do crimes typically last (from start to end time)?</button>
+        </div>
+        <a class="btn btn-success" href="https://github.com/Spartan-119/US_crime_statistics">
+            <span class="github-logo"></span>
+            Click here to view the GitHub Repository containing the Jupyter notebook.
+        </a>
+    </div>
+    <script>
+        function redirectTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+
+</html>

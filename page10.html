@@ -1,0 +1,90 @@
+<!-- FILEPATH: /C:/Users/Abin/OneDrive/Desktop/MSc Data Science/Applied Data Programming/Coursework 1/US_crime_statistics/templates/page1.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>What is the average response time of law enforcement (from dispatch to arrival) for reported crimes?</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .content {
+            margin-top: 50px;
+            text-align: justify;
+            background-color: #000;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .center-align {
+            justify-content: center;
+            align-items: center;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .image-container img {
+            width: 50%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Q9. What is the average response time of law enforcement (from dispatch to arrival) for reported crimes?</h1>
+        <div class="center-align">
+            <div class="image-container">
+                <img src="https://github.com/Spartan-119/MSc-Data-Science/blob/main/adp/09_1.png?raw=true" alt="distribution of law enforcement response time">
+            </div>
+            <div class="image-container">
+                <img src="https://github.com/Spartan-119/MSc-Data-Science/blob/main/adp/09_2.png?raw=true" alt="box plot of law enforcement response time">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h3>Insights into Weekday-Weekend Crime Variation:</h3>
+        <p>In scrutinizing the visualizations depicting the average response time of law enforcement from dispatch to arrival for reported crimes, notable patterns and potential contributing factors have been discerned.</p>
+        <br>
+        <p>Decline in Response Time Frequency:
+            The temporal analysis reveals a discernible decline in the frequency of law enforcement response times, particularly evident from late 2019 to early 2020. A plausible contributing factor to this trend is the global pandemic, namely COVID-19. Although establishing a causal relationship between the pandemic and the observed decline is challenging, a conspicuous correlation is evident. The implementation of mandatory quarantines, especially in major metropolitan areas, may have led to a reduction in the deployment of law enforcement officers, thereby influencing response times.</p>
+        <br>
+        <h4>Analytical Approaches:</h3>
+
+    <p><strong>Temporal Analysis:</strong><br>
+    Implementing time series analysis identifies anomalies and trends in law enforcement response times, offering insights into temporal dynamics.</p>
+
+    <p><strong>Correlation Assessment:</strong><br>
+    Computing Pearson correlation coefficients quantifies the strength and direction of the relationship between response times and key events, revealing external influences.</p>
+
+    <p><strong>Spatial Mapping:</strong><br>
+    Utilizing geospatial mapping discerns regional variations in response times, enhancing understanding of localized pandemic impacts.</p>
+
+    <p><strong>Cohort Stratification:</strong><br>
+    Stratifying data based on geographic and demographic factors allows nuanced examination of response time variations across distinct segments.</p>
+
+    <p><strong>Regression Modeling:</strong><br>
+    Constructing regression models assesses the statistical significance of the pandemic's impact on response times, considering potential confounding variables.</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

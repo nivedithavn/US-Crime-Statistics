@@ -1,0 +1,73 @@
+<!-- FILEPATH: /C:/Users/Abin/OneDrive/Desktop/MSc Data Science/Applied Data Programming/Coursework 1/US_crime_statistics/templates/page1.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>What are the most common types of crimes recorded in the dataset?</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .content {
+            margin-top: 50px;
+            text-align: justify;
+            background-color: #000;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .center-align {
+            justify-content: center;
+            align-items: center;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 120%;
+        }
+        .image-container img {
+            width: 50%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Q1. What are the most common types of crimes recorded in the dataset?</h1>
+        <div class="center-align">
+            <div class="image-container">
+                <img src="https://github.com/Spartan-119/MSc-Data-Science/blob/main/adp/01_1.png?raw=true" alt="distribution of law enforcement response time">
+            </div>
+            <div class="image-container">
+                <img src="https://github.com/Spartan-119/MSc-Data-Science/blob/main/adp/01_2.png?raw=true" alt="box plot of law enforcement response time">
+            </div>
+        </div>
+        <h3>Insights:</h3>
+        <ul>
+            <li>The analysis of crime data reveals that 'Theft From Motor Vehicle' emerges as the predominant crime type. This is evidenced by its prominent representation in the bar chart, where it leads in frequency compared to other crime categories.</li>
+            <li>In terms of prevalence, 'Drug/Narcotic Violations' and 'Simple Assault' are also significant, ranking second and third, respectively. This indicates a notable occurrence of these crime types within the studied dataset.</li>
+            <li>A closer examination through a pie chart representation shows that 'Theft From Motor Vehicle' constitutes 16.2% of the top 10 crime categories. This percentage underscores its substantial proportion in the overall crime composition, marking it as the most substantial segment among the leading crime types.</li>
+            <li>The deliberate exclusion of the category 'All Other Offenses' in the data visualizations serves a specific analytical purpose. It allows for a more focused examination of distinct crime types, rather than encompassing a broad and potentially diverse range of less frequent offenses. This approach facilitates a clearer understanding of specific crime trends and patterns, rather than diluting the analysis with a heterogeneous and less informative category.</li>
+        </ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

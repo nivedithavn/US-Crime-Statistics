@@ -1,0 +1,86 @@
+<!-- FILEPATH: /C:/Users/Abin/OneDrive/Desktop/MSc Data Science/Applied Data Programming/Coursework 1/US_crime_statistics/templates/page1.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>How do crime rates vary based on the day of the week?</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .content {
+            margin-top: 50px;
+            text-align: justify;
+            background-color: #000;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .center-align {
+            justify-content: center;
+            align-items: center;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 120%;
+        }
+        .image-container img {
+            width: 50%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Q8. How do crime rates vary based on the day of the week?</h1>
+        <div class="center-align">
+            <div class="image-container">
+                <img src="https://github.com/Spartan-119/MSc-Data-Science/blob/main/adp/08_1.png?raw=true" alt="distribution of law enforcement response time">
+            </div>
+            <div class="image-container">
+                <img src="https://github.com/Spartan-119/MSc-Data-Science/blob/main/adp/08_2.png?raw=true" alt="box plot of law enforcement response time">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h3>Insights: Observation of Weekly Crime Patterns</h3>
+        <p>
+            There is a consistent pattern in the dataset wherein crime rates exhibit peaks on Fridays, followed by Wednesdays and Thursdays, with the lowest incidence reported on Sundays. Several contributing factors to this trend can be identified:
+        </p>
+
+        <ol>
+            <li><strong>Weekend Social Dynamics:</strong> The initiation of the weekend on Fridays leads to elevated social activities, potentially contributing to a heightened reporting of incidents.</li>
+            <li><strong>Late-Week Fatigue Influence:</strong> Increased stress or fatigue towards the end of the workweek, specifically on Thursdays and Fridays, may amplify the likelihood of reported incidents.</li>
+            <li><strong>Nightlife Impact:</strong> Fridays, synonymous with nightlife and socializing, may witness increased crime reports due to heightened evening activities.</li>
+            <li><strong>Midweek Socialization:</strong> Sustained elevated social interactions on Wednesdays and Thursdays may exert an influence, potentially shaping the number of reported incidents.</li>
+            <li><strong>Workweek Routines:</strong> Policing resources may be strategically allocated based on historical trends, with Fridays receiving heightened attention due to consistently higher crime reports.</li>
+            <li><strong>Weekend Preparations:</strong> Sundays, characterized by reduced social activities as individuals prepare for the workweek, may result in a decrease in reported incidents.</li>
+            <li><strong>Policing Resource Allocation:</strong> Law enforcement agencies may allocate resources and adapt patrol patterns based on observed crime trends, thereby influencing reporting frequencies.</li>
+            <li><strong>Data Collection Practices:</strong> Reporting agencies, with varying operational hours or staffing levels on weekends, might impact the number of reported crimes.</li>
+            <li><strong>Routine Activities Theory:</strong> According to the routine activities theory, crime occurrence is influenced by the convergence of a motivated offender, a suitable target, and the absence of a capable guardian. These elements may align differently on Fridays compared to Sundays, contributing to the observed weekly variation in crime rates.</li>
+        </ol>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

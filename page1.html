@@ -1,0 +1,410 @@
+<!-- FILEPATH: /C:/Users/Abin/OneDrive/Desktop/MSc Data Science/Applied Data Programming/Coursework 1/US_crime_statistics/templates/page1.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Preliminary Data Analysis</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .content {
+            margin-top: 50px;
+            text-align: justify;
+            background-color: #000;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid white;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #444;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>This is the initial assessment of the US Crime Statistics dataset</h1>
+        <div class="content">
+            <h2>Pre-Cleaning Observation</h2>
+            <p>Based on Data Type Checking and Statistical Summary observations:</p>
+            <ul>
+                <li>Consider altering the data types of CR Number, Zip Code, and Address Number to CHAR or STRING, as they are not involved in calculations, and representing them as strings could enhance trend comprehension.</li>
+                <li>Similarly, propose changing Dispatch Date/Time, Start_Date_Time, and End_Date_Time to DATE types to facilitate time series trend analysis.</li>
+            </ul>
+            <p>This datatype adjustment enables simple statistical observations for enhanced insight generation using the describe() function.
+
+
+
+
+
+            </p>
+
+            <!-- Add the table below -->
+            <h3>Column Metadata</h3>
+            <table>
+                <tr>
+                    <th>#</th>
+                    <th>Column</th>
+                    <th>Metadata</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>Incident ID</td>
+                    <td>Incident ID</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Offence Code</td>
+                    <td>Code offended</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>CR Number</td>
+                    <td>Case / Crime Report Number</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Dispatch Date / Time</td>
+                    <td>The actual date and time a Officer was dispatched</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>NIBRS Code</td>
+                    <td>FBI National Incident-Based Reporting System (NIBRS) Code</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Victims</td>
+                    <td>Number of Victims</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Crime Name1</td>
+                    <td>TType of Crime Commited (Crime against Society/Person/Property or Other)</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Crime Name2</td>
+                    <td>Crime Category (Describes the NIBRS_CODE)</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Crime Name3</td>
+                    <td>Crime information(Describes the OFFENSE_CODE)</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Police District Name</td>
+                    <td>Name of District where crime was commited</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Block Address</td>
+                    <td>Address in 100 block level</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>City</td>
+                    <td>City where the crime took place</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>State</td>
+                    <td>State where the crime took place</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Zip Code</td>
+                    <td>Zip Code of block where crime took place</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Agency</td>
+                    <td>Assigned Police Department</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Place</td>
+                    <td>Place description</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Sector</td>
+                    <td>Police sector name, a subset of District</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Beat</td>
+                    <td>Police patrol area, a subset of Sector</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Dispatch Date / Time</td>
+                    <td>The actual date and time a Officer was dispatched</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>PRA</td>
+                    <td>Police Response Area, a subset of Beat</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Street Prefix</td>
+                    <td>North, South, East, West</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>Street Name</td>
+                    <td>Street Name</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>Street Suffix</td>
+                    <td>Street Suffix</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>Street Type</td>
+                    <td>Quadrant (NW, SW, etc)</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>Start_Date_Time</td>
+                    <td>Crime occurred from date/time</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>End_Date_Time</td>
+                    <td>The date and time when the investigation was closed</td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>Latitude</td>
+                    <td>Latitude co-ordinates of crime area</td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>Longitude</td>
+                    <td>Longitude co-ordinates of crime area</td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>Police District Number</td>
+                    <td>Major Police Boundary</td>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td>Location</td>
+                    <td>Location (Latitude, Longitude)</td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <!-- Missing Values Observation Table -->
+            <h3>Missing Values Observation before cleaning the data</h3>
+            <p>The total percentage of missing values is: 10.47%</p>
+            <p>Combined Summary Table:</p>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Count of Missing Values</th>
+                    <th>Percentage of Missing Values (%)</th>
+                </tr>
+                <tr>
+                    <td>Offence Code</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>CR Number</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>Dispatch Date / Time</td>
+                    <td>49029.0</td>
+                    <td>16.02</td>
+                </tr>
+                <tr>
+                    <td>NIBRS Code</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>Victims</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>Crime Name1</td>
+                    <td>272.0</td>
+                    <td>0.09</td>
+                </tr>
+                <tr>
+                    <td>Crime Name2</td>
+                    <td>272.0</td>
+                    <td>0.09</td>
+                </tr>
+                <tr>
+                    <td>Crime Name3</td>
+                    <td>272.0</td>
+                    <td>0.09</td>
+                </tr>
+                <tr>
+                    <td>Police District Name</td>
+                    <td>94.0</td>
+                    <td>0.03</td>
+                </tr>
+                <tr>
+                    <td>Block Address</td>
+                    <td>26206.0 </td>
+                    <td>8.56</td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td>1277.0</td>
+                    <td>0.42</td>
+                </tr>
+                <tr>
+                    <td>State </td>
+                    <td>1.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>Zip Code</td>
+                    <td>3179.0</td>
+                    <td>1.04</td>
+                </tr>
+                <tr>
+                    <td>Agency</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>Place</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>Sector</td>
+                    <td>1530.0</td>
+                    <td>0.5</td>
+                </tr>
+                <tr>
+                    <td>Beat</td>
+                    <td>1530.0</td>
+                    <td>0.5</td>
+                </tr>
+                <tr>
+                    <td>PRA</td>
+                    <td>239.0</td>
+                    <td>0.08</td>
+                </tr>
+                <tr>
+                    <td>Address Number</td>
+                    <td>26109.0</td>
+                    <td>8.53</td>
+                </tr>
+                <tr>
+                    <td>Street Prefix</td>
+                    <td>292463.0</td>
+                    <td>95.55</td>
+                </tr>
+                <tr>
+                    <td>Street Name</td>
+                    <td>1.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>Street Suffix</td>
+                    <td>300662.0</td>
+                    <td>98.23</td>
+                </tr>
+                <tr>
+                    <td>Street Type</td>
+                    <td>339.0</td>
+                    <td>0.11</td>
+                </tr>
+                <tr>
+                    <td>Start_Date_Time</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>End_Date_Time</td>
+                    <td>161658.0</td>
+                    <td>52.81</td>
+                </tr>
+                <tr>
+                    <td>Police District Number</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <!-- Observations Section -->
+            <h3>Observations</h3>
+            <h4>Column Evaluation and Missing Data Analysis</h4>
+            <hr>
+            <p>Several columns (`Block Address`, `Address Number`, `Latitude`, `Longitude`, `Street Prefix`, and `Street Suffix`) are identified as redundant and will be removed due to either duplicative information or a high percentage of missing values.</p>
+            
+            <ul>
+                <li>`Block Address`: Redundant composite of existing columns (`Address Number`, "BLK", `Street Name`, `Street Type`).</li>
+                <li>`Address Number`: Impractical to recover missing data; overshadowed by more informative `Place` column.</li>
+                <li>`Latitude` and `Longitude`: Redundant due to inclusion in the comprehensive `Location` column.</li>
+                <li>`Street Prefix` and `Street Suffix`: Lack analytical significance with over 95% missing values, rendering them inconsequential.</li>
+            </ul>
+            
+            <p>Additionally, missing values in `End_Date_Time` suggest ongoing investigations, aligning with dataset documentation. Proposed resolution involves estimating investigation conclusion based on crime type-specific average resolution times. For Dispatch Date / Time, further investigation is needed to determine reasons for missing values.
+            </p>
+
+            <br>
+            <br>
+            <h3>Analysis of Missing Values in "End_Date_Time" Column:</h3>
+            <p>The occurrence of missing values in the "End_Date_Time" column suggests that certain cases remain actively under investigation. These instances may necessitate further inquiry or await additional developments before a conclusive resolution is attained.<br><br>
+
+                Corroborating this observation, the provided dataset documentation (accessible at https://catalog.data.gov/dataset/crime) substantiates the indication that the "End_Date_Time" column encompasses records still in progress or subject to ongoing investigation. This implies that the absence of values is not attributed to data collection errors but rather reflects the ongoing nature of specific crime cases.<br><br>
+                
+                To address these missing values, a prospective approach involves calculating the average time typically required to resolve cases based on different crime types. This calculated average time can then be added to the investigation start date and time, subsequently serving as an estimation for the missing "End_Date_Time" values, thereby reflecting the conclusion of the respective investigations.</p>
+            </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

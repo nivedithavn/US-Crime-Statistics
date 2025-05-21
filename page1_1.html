@@ -1,0 +1,270 @@
+<!-- FILEPATH: /C:/Users/Abin/OneDrive/Desktop/MSc Data Science/Applied Data Programming/Coursework 1/US_crime_statistics/templates/page1.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exploratory Data Analysis</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .content {
+            margin-top: 50px;
+            text-align: justify;
+            background-color: #000;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid white;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #444;
+            color: #fff;
+        }
+        .highlight {
+            background-color: yellow;
+            padding: 0 5px; /* Add padding for better visibility */
+            color: black;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>This is the Exploratory Data Analysis (EDA) of the US Crime Statistics dataset</h1>
+        <caption>Statistical Summary for Numeric Data:</caption>
+        <table>
+            <tr>
+                <th></th>
+                <th>Victims</th>
+            </tr>
+            <tr>
+                <td>count</td>
+                <td>306094.0</td>
+            </tr>
+            <tr>
+                <td>mean</td>
+                <td>1.0226923755447672</td>
+            </tr>
+            <tr>
+                <td>std</td>
+                <td>0.19231084669516194</td>
+            </tr>
+            <tr>
+                <td>min</td>
+                <td>1.0</td>
+            </tr>
+            <tr>
+                <td>25%</td>
+                <td>1.0</td>
+            </tr>
+            <tr>
+                <td>50%</td>
+                <td>1.0</td>
+            </tr>
+            <tr>
+                <td>75%</td>
+                <td>1.0</td>
+            </tr>
+            <tr>
+                <td>max</td>
+                <td>22.0</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <h3>2. <strong>Observations:</strong></h3>
+        <p>The following columns have the missing values which either could be dropped or we will perform imputing steps using <em>mode()</em> with <em>groupby()</em> and <em>GoogleMaps</em> API services for retrieving missing and incorrect values. For, few we will use impute some random values or drop rows if there is no understanding.</p>
+        <ul>
+            <li>Using <em>mode()</em> and <em>groupby()</em>
+                <ul>
+                    <li>Crime Name1, Crime Name2, and Crime Name3</li>
+                    <li>Police District Name</li>
+                </ul>
+            </li>
+            <li>Drop the columns
+                <ul>
+                    <li>Sector, Beat, and PRA</li>
+                </ul>
+            </li>
+            <li>Using <em>GoogleMaps</em>
+                <ul>
+                    <li>City, Zip Code, Address Number, Street Name, and Street Type</li>
+                </ul>
+            </li>
+            <li>Drop columns Block Address,Address Number, Street Prefix and Street Suffix based on Data Cleaning</li>
+            <l1>Drop rows where Location has '0.0, 0.0' and contains '90.0' as latitude and longitude.</l1>
+        </ul>
+        <br>
+        <br>
+        <ul>
+            <li>After performing some groupby tasks on Excel, we could conclude that there is no such pattern using which we could come to a conclusion with which column we groupby either of these columns and apply <em>mode()</em> to fill missing values.</li>
+            <li>The count of missing values is less than 1% of the total data in the dataframe.</li>
+            <li>Wherever there is <em>TPPD</em> or <em>OTHER</em> in <code>Police District Number</code>, only there are missing values in columns <code>Sector</code> and <code>Beat</code>. Even after an internet search, we were unable to find any good and accurate evidence to prove what <em>TPPD</em> and <em>OTHER</em> mean in the <code>Police District Number</code> column.</li>
+            <li>Columns <code>Sector</code> and <code>Beat</code> have the same count and rows of missing values, i.e., 1350.</li>
+            <li>Therefore, we concluded to drop rows where all these columns have missing values.</li>
+        </ul>
+        
+
+        <div class="container">
+            
+            <h3>Missing Values Observation after cleaning the data</h3>
+            <h5>The total percentage of missing values after cleaning the data is: <span class="highlight">0.71%</span></h5>
+
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Count of Missing Values</th>
+                    <th>Percentage of Missing Values (%)</th>
+                </tr>
+                <tr>
+                    <td>Offence Code</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>CR Number</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>Dispatch Date / Time</td>
+                    <td>48840.0</td>
+                    <td>16.43</td>
+                </tr>
+                <tr>
+                    <td>NIBRS Code</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>Victims</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>Crime Name1</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>Crime Name2</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>Crime Name3</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>Police District Name</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>State</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>Zip Code</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>Agency</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>Place</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>Sector</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>Beat</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>PRA</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>Street Name</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>Street Type</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>Start_Date_Time</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>End_Date_Time</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>Police District Number</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td>0.0</td>
+                    <td>0.0</td>
+                </tr>
+            </table>
+            
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
